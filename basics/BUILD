@@ -4,8 +4,8 @@ cc_binary(
 )
 
 cc_binary(
-    name = "core-concepts",
-    srcs = ["core-concepts.cc"],
+    name = "primitive-types",
+    srcs = ["primitive-types.cc"],
     deps = [
         "@fmt_github//:fmt",
     ],
