@@ -45,3 +45,11 @@ cc_binary(
         "@fmt_github//:fmt",
     ]
 )
+
+cc_binary(
+    name = "struct-example",
+    srcs = ["struct-example.cc"],
+    deps = [
+        "@fmt_github//:fmt",
+    ]
+)
