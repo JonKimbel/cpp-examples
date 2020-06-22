@@ -14,9 +14,6 @@ cc_binary(
 cc_binary(
     name = "basic-structure",
     srcs = ["basic-structure.cc"],
-    deps = [
-        "@fmt_github//:fmt",
-    ],
 )
 
 cc_binary(
@@ -31,4 +28,12 @@ cc_library(
     name = "class-example-other-class",
     srcs = ["class-example-other-class.cc"],
     hdrs = ["class-example-other-class.h"],
+)
+
+cc_binary(
+    name = "vector-example",
+    srcs = ["vector-example.cc"],
+    deps = [
+        "@fmt_github//:fmt",
+    ]
 )
