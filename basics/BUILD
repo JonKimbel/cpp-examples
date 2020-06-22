@@ -37,3 +37,11 @@ cc_binary(
         "@fmt_github//:fmt",
     ]
 )
+
+cc_binary(
+    name = "pointers",
+    srcs = ["pointers.cc"],
+    deps = [
+        "@fmt_github//:fmt",
+    ]
+)
