@@ -2,4 +2,4 @@ bazel-bin
 bazel-cpp-examples
 bazel-out
 bazel-testlogs
-
+*.swp
