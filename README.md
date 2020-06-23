@@ -5,7 +5,6 @@ Example C++ code for my reference.
 ## TODO
 
 *   Finish adding basic code examples to `//basics/`
-    *   Templates - function, class, alias, variable
     *   Macros
     *   Inheritance
     *   Dynamic & static cast

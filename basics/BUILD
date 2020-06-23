@@ -53,3 +53,11 @@ cc_binary(
         "@fmt_github//:fmt",
     ]
 )
+
+cc_binary(
+    name = "templates",
+    srcs = ["templates.cc"],
+    deps = [
+        "@fmt_github//:fmt",
+    ],
+)
