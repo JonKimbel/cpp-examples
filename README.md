@@ -2,6 +2,11 @@
 
 Example C++ code for my reference.
 
+## Setup
+
+1.  Install bazel following [these docs](https://docs.bazel.build/versions/master/install-ubuntu.html).
+2.  From this directory, run e.g. `bazel run //basics:basic-structure`
+
 ## TODO
 
 *   Finish adding basic code examples to `//basics/`
