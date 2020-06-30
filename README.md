@@ -6,11 +6,13 @@ Example C++ code for my reference.
 
 *   Finish adding basic code examples to `//basics/`
     *   Macros
+    *   Inlining functions
     *   Inheritance
     *   Dynamic & static cast
     *   Virtual methods
     *   Operator overloading
     *   Exception handling
+    *   ADL (https://en.wikipedia.org/wiki/Argument-dependent_name_lookup)
 *   Look through [C++03](https://en.cppreference.com/w/cpp/11) and add example usage to `//cpp11/`.
 *   Look through [C++11](https://en.cppreference.com/w/cpp/11) and add example usage to `//cpp11/`.
 *   Look through [C++14](https://en.cppreference.com/w/cpp/11) and add example usage to `//cpp14/`.

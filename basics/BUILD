@@ -61,3 +61,11 @@ cc_binary(
         "@fmt_github//:fmt",
     ],
 )
+
+cc_binary(
+    name = "macros",
+    srcs = ["macros.cc"],
+    deps = [
+        "@fmt_github//:fmt",
+    ],
+)
