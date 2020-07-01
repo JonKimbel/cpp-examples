@@ -91,18 +91,26 @@ int main() {
 
   std::cout << std::endl << "~~ predefined macros ~~~" << std::endl;
 
-  std::cout << fmt::format("__FILE__: {}\n", __FILE__)
-      << fmt::format("__LINE__: {}\n", __LINE__)
-      << fmt::format("__LINE__: {}\n", __LINE__)
-      << fmt::format("__LINE__: {}\n", __LINE__)
-      << fmt::format("__DATE__: {}\n", __DATE__)
-      << fmt::format("__TIME__: {}\n", __TIME__)
-      << fmt::format("__STDC__: {}\n", __STDC__)
-      << fmt::format("__STDC_HOSTED__: {}\n", __STDC_HOSTED__)
-      << fmt::format("__cplusplus: {}\n", __cplusplus)
+  std::cout << "standard stuff:\n"
+      << fmt::format("\t__FILE__: {}\n", __FILE__)
+      << fmt::format("\t__LINE__: {}\n", __LINE__)
+      << fmt::format("\t__LINE__: {}\n", __LINE__)
+      << fmt::format("\t__LINE__: {}\n", __LINE__)
+      << fmt::format("\t__DATE__: {}\n", __DATE__)
+      << fmt::format("\t__TIME__: {}\n", __TIME__)
+      << fmt::format("\t__STDC__: {}\n", __STDC__)
+      << fmt::format("\t__STDC_HOSTED__: {}\n", __STDC_HOSTED__)
+      << fmt::format("\t__cplusplus: {}\n", __cplusplus)
       << "__STDC_VERSION__, __OBJC__, and __ASSEMBLER__ should all be defined "
       << "when using those languages." << std::endl;
 
+  std::cout << "there are a bunch of predefined macros which simply tell you about the "
+            "compiler.\n";
+
+  std::cout << "there are some \"named operators\" for boolean operations:\n"
+      << fmt::format("\ttrue and false = {}\n", true and false)
+      << fmt::format("\t1 bitand 3 = {}\n", 1 bitand 3)
+      << fmt::format("\ttrue xor false = {}\n", true xor false);
 
   // TODO: wrap up these topics:
   //   https://gcc.gnu.org/onlinedocs/cpp/Operator-Precedence-Problems.html#Operator-Precedence-Problems
