@@ -18,7 +18,7 @@
 const char* example_command();
 
 int main() {
-  std::cout << std::endl << "~~~ macros replace their names with their contents ~~~" << std::endl;
+  std::cout << "~~~ macros replace their names with their contents ~~~" << std::endl;
 
 
   std::cout << SIMPLE_MACRO << std::endl;
@@ -36,11 +36,14 @@ int main() {
 
   #define MACROS_CAN_CALL_OTHER_MACROS_1 MACROS_CAN_CALL_OTHER_MACROS_2
   #define MACROS_CAN_CALL_OTHER_MACROS_2 3
-  std::cout << fmt::format("macros can call other macros: {}\n", MACROS_CAN_CALL_OTHER_MACROS_1);
+  std::cout
+      << fmt::format("macros can call other macros: {}\n", MACROS_CAN_CALL_OTHER_MACROS_1);
   #define MACROS_CAN_CALL_OTHER_MACROS_2 4
-  std::cout << fmt::format("macros can call other macros: {}\n", MACROS_CAN_CALL_OTHER_MACROS_1);
+  std::cout
+      << fmt::format("macros can call other macros: {}\n", MACROS_CAN_CALL_OTHER_MACROS_1);
   #define MACROS_CAN_CALL_OTHER_MACROS_1 5
-  std::cout << fmt::format("macros can call other macros: {}\n", MACROS_CAN_CALL_OTHER_MACROS_1);
+  std::cout
+      << fmt::format("macros can call other macros: {}\n", MACROS_CAN_CALL_OTHER_MACROS_1);
 
   std::cout << std::endl << "~~ macros can be used like functions ~~~" << std::endl;
 
@@ -69,8 +72,8 @@ int main() {
   std::cout << fmt::format("output of command(example) - should call example_command(): {}\n",
       command(example));
 
-  std::cout << std::endl << "~~ macros can have multiple arguments using ... and __VA_ARGS__ ~~~"
-      << std::endl;
+  std::cout << std::endl
+      << "~~ macros can have multiple arguments using ... and __VA_ARGS__ ~~~" << std::endl;
 
   #define pront(...) std::cout << fmt::format("{} {}{}{}\n", __VA_ARGS__)
   pront("\"...\" = varargs parameter symbol, ", "__VA_ARGS__ = default args name", "!", "!");
@@ -86,9 +89,22 @@ int main() {
   pront3("you put the required args first!\n");
   pront3("use __VA_OPT__(whatever) to only expand \"whatever\" when varargs are supplied!\n");
 
+  std::cout << std::endl << "~~ predefined macros ~~~" << std::endl;
+
+  std::cout << fmt::format("__FILE__: {}\n", __FILE__)
+      << fmt::format("__LINE__: {}\n", __LINE__)
+      << fmt::format("__LINE__: {}\n", __LINE__)
+      << fmt::format("__LINE__: {}\n", __LINE__)
+      << fmt::format("__DATE__: {}\n", __DATE__)
+      << fmt::format("__TIME__: {}\n", __TIME__)
+      << fmt::format("__STDC__: {}\n", __STDC__)
+      << fmt::format("__STDC_HOSTED__: {}\n", __STDC_HOSTED__)
+      << fmt::format("__cplusplus: {}\n", __cplusplus)
+      << "__STDC_VERSION__, __OBJC__, and __ASSEMBLER__ should all be defined "
+      << "when using those languages." << std::endl;
+
 
   // TODO: wrap up these topics:
-  //   https://gcc.gnu.org/onlinedocs/cpp/Predefined-Macros.html#Predefined-Macros
   //   https://gcc.gnu.org/onlinedocs/cpp/Operator-Precedence-Problems.html#Operator-Precedence-Problems
   //   https://gcc.gnu.org/onlinedocs/cpp/Duplication-of-Side-Effects.html#Duplication-of-Side-Effects
   //   https://gcc.gnu.org/onlinedocs/cpp/Argument-Prescan.html#Argument-Prescan
