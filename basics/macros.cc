@@ -15,6 +15,8 @@
 #define function_like_macro_stringizing(x) \
     std::cout << fmt::format("macros aren't expanded when stringized: " #x " (vs {})\n", x);
 
+const char* example_command();
+
 int main() {
   std::cout << std::endl << "~~~ macros replace their names with their contents ~~~" << std::endl;
 
@@ -60,9 +62,32 @@ int main() {
       without_semicolon);
   std::cout << "wrapping macro contents in \"do { ... } while(0)\" can sometimes help\n";
 
+  std::cout << std::endl << "~~ args and other tokens can be concatenated using \"##\" ~~~"
+      << std::endl;
+
+  #define command(name) name ## _command()
+  std::cout << fmt::format("output of command(example) - should call example_command(): {}\n",
+      command(example));
+
+  std::cout << std::endl << "~~ macros can have multiple arguments using ... and __VA_ARGS__ ~~~"
+      << std::endl;
+
+  #define pront(...) std::cout << fmt::format("{} {}{}{}\n", __VA_ARGS__)
+  pront("\"...\" = varargs parameter symbol, ", "__VA_ARGS__ = default args name", "!", "!");
+
+  #define pront2(fmt_args...) std::cout << fmt::format("{} {}{}{}\n", fmt_args)
+  pront2("name args by putting the variable name ", "before the \"...\"", "!", "!");
+
+  #define pront3(fmt_string, ...) std::cout << \
+      fmt::format(fmt_string __VA_OPT__(,) __VA_ARGS__)
+  pront3("you can mix required args with ");
+  pront3("{}", "varargs, ");
+  pront3("{} {} {} ", "as", "long", "as");
+  pront3("you put the required args first!\n");
+  pront3("use __VA_OPT__(whatever) to only expand \"whatever\" when varargs are supplied!\n");
+
+
   // TODO: wrap up these topics:
-  //   https://gcc.gnu.org/onlinedocs/cpp/Concatenation.html#Concatenation
-  //   https://gcc.gnu.org/onlinedocs/cpp/Variadic-Macros.html#Variadic-Macros
   //   https://gcc.gnu.org/onlinedocs/cpp/Predefined-Macros.html#Predefined-Macros
   //   https://gcc.gnu.org/onlinedocs/cpp/Operator-Precedence-Problems.html#Operator-Precedence-Problems
   //   https://gcc.gnu.org/onlinedocs/cpp/Duplication-of-Side-Effects.html#Duplication-of-Side-Effects
@@ -71,4 +96,8 @@ int main() {
 
 
   return 0;
+}
+
+const char* example_command() {
+  return "hello";
 }
