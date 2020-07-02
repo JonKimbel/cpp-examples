@@ -18,7 +18,13 @@
 const char* example_command();
 
 int main() {
-  std::cout << "~~~ macros replace their names with their contents ~~~" << std::endl;
+  std::cout << "~~ quick note ~~~" << std::endl;
+
+  std::cout <<
+      "this program is a stylistic mess, just check out the build warnings.\n"
+      "it's for demonstration purposes only.\n";
+
+  std::cout << std::endl << "~~~ macros replace their names with their contents ~~~" << std::endl;
 
 
   std::cout << SIMPLE_MACRO << std::endl;
@@ -114,13 +120,30 @@ int main() {
 
   std::cout << std::endl << "~~ operator precedence pitfalls ~~~" << std::endl;
 
+  std::cout << "it's best practice to wrap arg usage and the macro definition as a whole in ().\n";
+
+  #define add(x,y) x + y
+  #define add_wrapped(x,y) ((x) + (y))
+
+  std::cout
+      << fmt::format("\tresult of calling add(3,2): {}\n", add(3,2) * 2)
+      << fmt::format("\tresult of calling add_wrapped(3,2): {}\n", add_wrapped(3,2) * 2);
+
   std::cout <<
-      "it's best practice to wrap arg usage and the macro definition as a whole in ().\n"
       "if the macro is \"add(x, y) x + y\" and we use it as add(3, 2) * 2, it will expand to\n"
-      "\"3 + 2 * 2\", which equals \"7\" - the caller probably expects \"10\".\n";
+      "\"3 + 2 * 2\".\n";
+
+  std::cout << std::endl << "~~ side-effect pitfalls ~~~" << std::endl;
+
+  std::cout <<
+      "if you \"pass\" the result of a method into a macro, the method call may be duplicated.\n"
+      "for example, a macro defined like so:\n"
+      "\t#define min(X,Y) X < Y ? X : Y\n"
+      "would result in \"min(foo(), bar());\" expanding into \"foo() < bar() ? foo() : bar()\".\n"
+      "either foo() or bar() is guaranteed to be called twice.\n"
+      "this is problematic if foo() or bar() have a side-effect. be careful calling macros.\n";
 
   // TODO: wrap up these topics:
-  //   https://gcc.gnu.org/onlinedocs/cpp/Duplication-of-Side-Effects.html#Duplication-of-Side-Effects
   //   https://gcc.gnu.org/onlinedocs/cpp/Argument-Prescan.html#Argument-Prescan
   //   https://gcc.gnu.org/onlinedocs/cpp/Newlines-in-Arguments.html#Newlines-in-Arguments
 
