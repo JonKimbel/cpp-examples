@@ -112,12 +112,17 @@ int main() {
       << fmt::format("\t1 bitand 3 = {}\n", 1 bitand 3)
       << fmt::format("\ttrue xor false = {}\n", true xor false);
 
+  std::cout << std::endl << "~~ operator precedence pitfalls ~~~" << std::endl;
+
+  std::cout <<
+      "it's best practice to wrap arg usage and the macro definition as a whole in ().\n"
+      "if the macro is \"add(x, y) x + y\" and we use it as add(3, 2) * 2, it will expand to\n"
+      "\"3 + 2 * 2\", which equals \"7\" - the caller probably expects \"10\".\n";
+
   // TODO: wrap up these topics:
-  //   https://gcc.gnu.org/onlinedocs/cpp/Operator-Precedence-Problems.html#Operator-Precedence-Problems
   //   https://gcc.gnu.org/onlinedocs/cpp/Duplication-of-Side-Effects.html#Duplication-of-Side-Effects
   //   https://gcc.gnu.org/onlinedocs/cpp/Argument-Prescan.html#Argument-Prescan
   //   https://gcc.gnu.org/onlinedocs/cpp/Newlines-in-Arguments.html#Newlines-in-Arguments
-
 
   return 0;
 }
