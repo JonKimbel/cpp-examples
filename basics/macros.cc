@@ -143,8 +143,25 @@ int main() {
       "either foo() or bar() is guaranteed to be called twice.\n"
       "this is problematic if foo() or bar() have a side-effect. be careful calling macros.\n";
 
+  std::cout << std::endl << "~~ argument prescan pitfalls ~~~" << std::endl;
+
+  std::cout <<
+      "macro arguments are scanned *twice* to expand macro calls - once before substitution into\n"
+      "the macro and once afterwards. this mostly causes things to \"just work\" as you'd\n"
+      "expect. it's only disabled when the argument is stringized or concatenated, i.e.:\n";
+  #define stringize(x) #x
+  #define output(x) x
+  #define fav_number 4
+  std::cout
+      << fmt::format("\t stringize(fav_number): {}\n", stringize(fav_number))
+      << fmt::format("\t output(fav_number): {}\n", output(fav_number));
+  std::cout <<
+      "prescan can cause troubles if macros use \"unshielded\" commas\n"
+      "(aka commas outside parens). I was unable to get the dangerous case documented in the gcc\n"
+      "docs to actually compile, but if you shield your macros with () you can avoid this.\n";
+
+
   // TODO: wrap up these topics:
-  //   https://gcc.gnu.org/onlinedocs/cpp/Argument-Prescan.html#Argument-Prescan
   //   https://gcc.gnu.org/onlinedocs/cpp/Newlines-in-Arguments.html#Newlines-in-Arguments
 
   return 0;
