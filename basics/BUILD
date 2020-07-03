@@ -77,3 +77,11 @@ cc_binary(
         "@fmt_github//:fmt",
     ],
 )
+
+cc_binary(
+    name = "function-pointers",
+    srcs = ["function-pointers.cc"],
+    deps = [
+        "@fmt_github//:fmt",
+    ],
+)

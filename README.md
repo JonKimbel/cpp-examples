@@ -10,12 +10,12 @@ Example C++ code for my reference.
 ## TODO
 
 *   Finish adding basic code examples to `//basics/`
-    *   Function pointers
     *   Inheritance
     *   Dynamic & static cast
     *   Virtual methods
     *   Operator overloading
     *   Exception handling
+    *   Typedef
     *   ADL (https://en.wikipedia.org/wiki/Argument-dependent_name_lookup)
 *   Look through [C++03](https://en.cppreference.com/w/cpp/11) and add example usage to `//cpp11/`.
 *   Look through [C++11](https://en.cppreference.com/w/cpp/11) and add example usage to `//cpp11/`.
