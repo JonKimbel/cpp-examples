@@ -10,14 +10,31 @@ Example C++ code for my reference.
 ## TODO
 
 *   Finish adding basic code examples to `//basics/`
-    *   Inheritance
-    *   Dynamic & static cast
+    *   Inheritance (virtual)
+    *   Friend functions
+    *   Dynamic & static cast, reinterpret cast, const cast
     *   Virtual methods
     *   Operator overloading
     *   Exception handling
     *   Typedef
     *   Other # commands, e.g. #ifndef...#endif, etc.
     *   ADL (https://en.wikipedia.org/wiki/Argument-dependent_name_lookup)
+    *   Multithreading (volatile)
+    *   auto
+    *   extern
+    *   sizeof
+    *   register
+    *   union
+    *   using
+    *   operator (give examples for all possible operator overloads)
+    *   explicit
+    *   mutable
+    *   typeid
+    *   asm
+    *   Signal handling
+    *   Namespaces
+    *   Common types
+    *   Forward declares vs. includes
 *   Look through [C++03](https://en.cppreference.com/w/cpp/11) and add example usage to `//cpp11/`.
 *   Look through [C++11](https://en.cppreference.com/w/cpp/11) and add example usage to `//cpp11/`.
 *   Look through [C++14](https://en.cppreference.com/w/cpp/11) and add example usage to `//cpp14/`.

@@ -98,13 +98,11 @@ cc_binary(
 
 cc_library(
     name = "base-class",
-    srcs = ["base-class.cc"],
     hdrs = ["base-class.h"],
 )
 
 cc_library(
     name = "derived-class",
-    srcs = ["derived-class.cc"],
     hdrs = ["derived-class.h"],
     deps = [
         ":base-class",
