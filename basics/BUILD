@@ -69,3 +69,11 @@ cc_binary(
         "@fmt_github//:fmt",
     ],
 )
+
+cc_binary(
+    name = "inlining",
+    srcs = ["inlining.cc"],
+    deps = [
+        "@fmt_github//:fmt",
+    ],
+)

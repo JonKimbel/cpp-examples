@@ -10,7 +10,7 @@ Example C++ code for my reference.
 ## TODO
 
 *   Finish adding basic code examples to `//basics/`
-    *   Inlining functions
+    *   Function pointers
     *   Inheritance
     *   Dynamic & static cast
     *   Virtual methods
