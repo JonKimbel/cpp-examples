@@ -160,10 +160,6 @@ int main() {
       "(aka commas outside parens). I was unable to get the dangerous case documented in the gcc\n"
       "docs to actually compile, but if you shield your macros with () you can avoid this.\n";
 
-
-  // TODO: wrap up these topics:
-  //   https://gcc.gnu.org/onlinedocs/cpp/Newlines-in-Arguments.html#Newlines-in-Arguments
-
   return 0;
 }
 
