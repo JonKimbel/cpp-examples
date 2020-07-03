@@ -85,3 +85,28 @@ cc_binary(
         "@fmt_github//:fmt",
     ],
 )
+
+cc_binary(
+    name = "inheritance",
+    srcs = ["inheritance.cc"],
+    deps = [
+        "@fmt_github//:fmt",
+        ":base-class",
+        ":derived-class",
+    ],
+)
+
+cc_library(
+    name = "base-class",
+    srcs = ["base-class.cc"],
+    hdrs = ["base-class.h"],
+)
+
+cc_library(
+    name = "derived-class",
+    srcs = ["derived-class.cc"],
+    hdrs = ["derived-class.h"],
+    deps = [
+        ":base-class",
+    ],
+)

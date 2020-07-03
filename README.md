@@ -16,6 +16,7 @@ Example C++ code for my reference.
     *   Operator overloading
     *   Exception handling
     *   Typedef
+    *   Other # commands, e.g. #ifndef...#endif, etc.
     *   ADL (https://en.wikipedia.org/wiki/Argument-dependent_name_lookup)
 *   Look through [C++03](https://en.cppreference.com/w/cpp/11) and add example usage to `//cpp11/`.
 *   Look through [C++11](https://en.cppreference.com/w/cpp/11) and add example usage to `//cpp11/`.
