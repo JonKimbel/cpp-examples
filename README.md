@@ -10,7 +10,6 @@ Example C++ code for my reference.
 ## TODO
 
 *   Finish adding basic code examples to `//basics/`
-    *   Macros
     *   Inlining functions
     *   Inheritance
     *   Dynamic & static cast
