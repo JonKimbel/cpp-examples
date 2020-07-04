@@ -92,7 +92,8 @@ cc_binary(
     deps = [
         "@fmt_github//:fmt",
         ":base-class",
-        ":derived-class",
+        ":parent-class",
+        ":child-class",
     ],
 )
 
@@ -102,9 +103,17 @@ cc_library(
 )
 
 cc_library(
-    name = "derived-class",
-    hdrs = ["derived-class.h"],
+    name = "parent-class",
+    hdrs = ["parent-class.h"],
     deps = [
         ":base-class",
+    ],
+)
+
+cc_library(
+    name = "child-class",
+    hdrs = ["child-class.h"],
+    deps = [
+        ":parent-class",
     ],
 )
