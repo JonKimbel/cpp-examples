@@ -10,7 +10,7 @@ Example C++ code for my reference.
 ## TODO
 
 *   Finish adding basic code examples to `//basics/`
-    *   Operator overloading & free operator functions
+    *   Variadic functions
     *   Exception handling
     *   Typedef
     *   Other # commands, e.g. #ifndef...#endif, etc.

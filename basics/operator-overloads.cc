@@ -1,10 +1,10 @@
 #include <iostream>
+#include <cstdarg>
 #include "fmt/format.h"
 
-class Example {
-
-
-};
+std::ostream& operator,(std::ostream& ostream, const char* rhs) {
+  return ostream << rhs;
+}
 
 int main() {
   std::cout <<
@@ -12,7 +12,7 @@ int main() {
       "\n"
       "Arithmetic:\n"
       "  - '+'   - addition\n"
-      "  - '-'   - subtraction\n"
+      "  - '-'   - subtraction OR minus sign (can be overridden separately)\n"
       "  - '*'   - multiplication\n"
       "  - '/'   - division\n"
       "  - '%'   - modulus\n"
@@ -22,8 +22,10 @@ int main() {
       "  - '&'   - bitwise AND\n"
       "  - '|'   - bitwise OR\n"
       "  - '~'   - bitwise NOT\n"
-      "  - '<<'  - bitwise left shift (used for IO because it looks like UNIX redirection)\n"
-      "  - '>>'  - bitwise right shift (used for IO because it looks like UNIX redirection)\n"
+      "  - '<<'  - bitwise left shift aka stream insertion\n"
+      "            (it was used for IO because it looks like UNIX redirection)\n"
+      "  - '>>'  - bitwise right shift aka stream extraction\n"
+      "            (it was used for IO because it looks like UNIX redirection)\n"
       "\n"
       "Comparison:\n"
       "  - '<'   - less than\n"
@@ -56,8 +58,8 @@ int main() {
       "  - '>>=' - bitwise right shift assignment\n"
       "\n"
       "Increment/decrement:\n"
-      "  - '++'  - increment\n"
-      "  - '--'  - decrement\n"
+      "  - '++'  - increment (prefix and postfix version can be overloaded separately)\n"
+      "  - '--'  - decrement (prefix and postfix version can be overloaded separately)\n"
       "\n"
       "Misc:\n"
       "  - ','   - evaluate left, then right, then return right\n"
@@ -67,6 +69,11 @@ int main() {
       "    (note that overloads will lose their rigorous order-of-evaluation before C++17)\n"
       "  - '( )' - can be passed an arbitrary number of parameters.\n"
       "  - '[ ]' - access the contents of an array or list\n\n";
+
+  std::cout <<
+    "you can also overload operators outside class definitions (functions outside classes are\n"
+    "called \"free functions\"). this doesn't work for every operator, but it works for a lot\n"
+    "of them. this text was output using an overridden comma operator.\n\n";
 
   return 0;
 }
