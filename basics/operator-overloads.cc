@@ -61,10 +61,12 @@ int main() {
       "\n"
       "Misc:\n"
       "  - ','   - evaluate left, then right, then return right\n"
-      "  - '->*' - \n"
-      "  - '->'  - (must either return a raw pointer or an object which has -> overloaded)\n"
-      "  - '( )' - \n"
-      "  - '[ ]' - \n\n";
+      "    (overloads do not sequence the left operand before the right until C++17)\n"
+      "  - '->*' - call right member_function_pointer on left class\n"
+      "  - '->'  - call right function on left class\n"
+      "    (note that overloads will lose their rigorous order-of-evaluation before C++17)\n"
+      "  - '( )' - can be passed an arbitrary number of parameters.\n"
+      "  - '[ ]' - access the contents of an array or list\n\n";
 
   return 0;
 }
