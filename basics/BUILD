@@ -121,6 +121,11 @@ cc_library(
 cc_binary(
     name = "friend-functions",
     srcs = ["friend-functions.cc"],
+)
+
+cc_binary(
+    name = "casts",
+    srcs = ["casts.cc"],
     deps = [
         "@fmt_github//:fmt",
     ],

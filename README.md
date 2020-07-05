@@ -10,8 +10,7 @@ Example C++ code for my reference.
 ## TODO
 
 *   Finish adding basic code examples to `//basics/`
-    *   Dynamic & static cast, reinterpret cast, const cast
-    *   Virtual methods
+    *   Casts
     *   Operator overloading
     *   Exception handling
     *   Typedef
