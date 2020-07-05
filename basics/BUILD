@@ -117,3 +117,11 @@ cc_library(
         ":parent-class",
     ],
 )
+
+cc_binary(
+    name = "friend-functions",
+    srcs = ["friend-functions.cc"],
+    deps = [
+        "@fmt_github//:fmt",
+    ],
+)
