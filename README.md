@@ -10,8 +10,7 @@ Example C++ code for my reference.
 ## TODO
 
 *   Finish adding basic code examples to `//basics/`
-    *   Casts
-    *   Operator overloading
+    *   Operator overloading & free operator functions
     *   Exception handling
     *   Typedef
     *   Other # commands, e.g. #ifndef...#endif, etc.
