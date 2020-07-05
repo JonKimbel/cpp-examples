@@ -10,7 +10,6 @@ Example C++ code for my reference.
 ## TODO
 
 *   Finish adding basic code examples to `//basics/`
-    *   Inheritance (virtual)
     *   Friend functions
     *   Dynamic & static cast, reinterpret cast, const cast
     *   Virtual methods
