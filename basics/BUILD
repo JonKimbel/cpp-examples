@@ -134,7 +134,10 @@ cc_binary(
 cc_binary(
     name = "operator-overloads",
     srcs = ["operator-overloads.cc"],
-    deps = [
-        "@fmt_github//:fmt",
-    ],
 )
+
+cc_binary(
+    name = "variadic",
+    srcs = ["variadic.cc"],
+)
+

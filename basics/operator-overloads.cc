@@ -1,6 +1,4 @@
 #include <iostream>
-#include <cstdarg>
-#include "fmt/format.h"
 
 std::ostream& operator,(std::ostream& ostream, const char* rhs) {
   return ostream << rhs;
