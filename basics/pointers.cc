@@ -51,10 +51,11 @@ void print_matrix_with_pointers(int** matrix) {
 }
 
 void unmake_matrix(int** matrix) {
+  // Need to use 'delete[]' instead of 'delete' when de-allocating arrays.
   for (int x = 0; x < 10; x++) {
-    delete matrix[x];
+    delete[] matrix[x];
   }
-  delete matrix;
+  delete[] matrix;
 }
 
 
