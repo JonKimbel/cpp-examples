@@ -1,0 +1,70 @@
+#include <iostream>
+#include "fmt/format.h"
+
+class Example {
+
+
+};
+
+int main() {
+  std::cout <<
+      "C++ lets you override operators in your class definitions:\n"
+      "\n"
+      "Arithmetic:\n"
+      "  - '+'   - addition\n"
+      "  - '-'   - subtraction\n"
+      "  - '*'   - multiplication\n"
+      "  - '/'   - division\n"
+      "  - '%'   - modulus\n"
+      "\n"
+      "Bitwise arithmetic:\n"
+      "  - '^'   - bitwise XOR\n"
+      "  - '&'   - bitwise AND\n"
+      "  - '|'   - bitwise OR\n"
+      "  - '~'   - bitwise NOT\n"
+      "  - '<<'  - bitwise left shift (used for IO because it looks like UNIX redirection)\n"
+      "  - '>>'  - bitwise right shift (used for IO because it looks like UNIX redirection)\n"
+      "\n"
+      "Comparison:\n"
+      "  - '<'   - less than\n"
+      "  - '>'   - greater than\n"
+      "  - '=='  - equals\n"
+      "  - '!='  - not equals\n"
+      "  - '<='  - less than or equals\n"
+      "  - '>='  - greater than or equals\n"
+      "  - '<=>' - three-way comparison (returns a negative number if less than,\n"
+      "            0 if equal, a postive number if greater than)\n"
+      "\n"
+      "Logical:\n"
+      "  - '!'   - logical NOT\n"
+      "  - '&&'  - logical AND (note that overloads will lose their rigorous order-of-evaluation\n"
+      "            before C++17 and short-circuit evaluation in all C++ versions)\n"
+      "  - '||'  - logical OR (note that overloads will lose their rigorous order-of-evaluation\n"
+      "            before C++17 and short-circuit evaluation in all C++ versions)\n"
+      "\n"
+      "Assignment:\n"
+      "  - '='   - assigment\n"
+      "  - '+='  - addition assignment\n"
+      "  - '-='  - subtraction assignment\n"
+      "  - '*='  - multiplication assignment\n"
+      "  - '/='  - division assignment\n"
+      "  - '%='  - modulus assignment\n"
+      "  - '^='  - bitwise XOR assignment\n"
+      "  - '&='  - bitwise AND assignment\n"
+      "  - '|='  - bitwise OR assignment\n"
+      "  - '<<=' - bitwise left shift assignment\n"
+      "  - '>>=' - bitwise right shift assignment\n"
+      "\n"
+      "Increment/decrement:\n"
+      "  - '++'  - increment\n"
+      "  - '--'  - decrement\n"
+      "\n"
+      "Misc:\n"
+      "  - ','   - evaluate left, then right, then return right\n"
+      "  - '->*' - \n"
+      "  - '->'  - (must either return a raw pointer or an object which has -> overloaded)\n"
+      "  - '( )' - \n"
+      "  - '[ ]' - \n\n";
+
+  return 0;
+}
