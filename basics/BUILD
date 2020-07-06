@@ -141,3 +141,11 @@ cc_binary(
     srcs = ["variadic.cc"],
 )
 
+cc_binary(
+    name = "exceptions",
+    srcs = ["exceptions.cc"],
+    deps = [
+        "@fmt_github//:fmt",
+    ],
+)
+
