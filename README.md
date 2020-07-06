@@ -35,4 +35,5 @@ Example C++ code for my reference.
 *   Look through [C++20](https://en.cppreference.com/w/cpp/20) and add example usage to `//cpp20/`.
 *   Look through `std` library and add example usage to `//std/`.
 *   Look through `absl` library and add example usage to `//absl/`.
-*   Check out the [Google style guide](https://google.github.io/styleguide/cppguide.html)
+*   Check out the [Google style guide](https://google.github.io/styleguide/cppguide.html).
+*   Look for the nastiest C++ hacks I can find, figure out how they work.

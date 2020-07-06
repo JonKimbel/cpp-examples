@@ -156,3 +156,8 @@ cc_binary(
         "@fmt_github//:fmt",
     ],
 )
+
+cc_binary(
+    name = "console-args",
+    srcs = ["console-args.cc"],
+)
