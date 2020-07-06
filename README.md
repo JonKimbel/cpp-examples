@@ -10,7 +10,7 @@ Example C++ code for my reference.
 ## TODO
 
 *   Finish adding basic code examples to `//basics/`
-    *   Typedef
+    *   Console args
     *   Other # commands, e.g. #ifndef...#endif, etc.
     *   ADL (https://en.wikipedia.org/wiki/Argument-dependent_name_lookup)
     *   Multithreading (volatile)

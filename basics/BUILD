@@ -149,3 +149,10 @@ cc_binary(
     ],
 )
 
+cc_binary(
+    name = "typedef",
+    srcs = ["typedef.cc"],
+    deps = [
+        "@fmt_github//:fmt",
+    ],
+)
