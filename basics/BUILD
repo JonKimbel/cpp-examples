@@ -164,3 +164,11 @@ cc_binary(
         "@fmt_github//:fmt",
     ],
 )
+
+cc_binary(
+    name = "directives",
+    srcs = ["directives.cc"],
+    deps = [
+        "@fmt_github//:fmt",
+    ],
+)
