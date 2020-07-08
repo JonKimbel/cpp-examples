@@ -172,3 +172,11 @@ cc_binary(
         "@fmt_github//:fmt",
     ],
 )
+
+cc_binary(
+    name = "adl",
+    srcs = ["adl.cc"],
+    deps = [
+        "@fmt_github//:fmt",
+    ],
+)
