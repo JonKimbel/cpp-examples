@@ -180,3 +180,9 @@ cc_binary(
         "@fmt_github//:fmt",
     ],
 )
+
+cc_binary(
+    name = "pthread",
+    srcs = ["pthread.cc"],
+    linkopts = ["-pthread"],
+)

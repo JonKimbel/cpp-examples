@@ -10,7 +10,6 @@ Example C++ code for my reference.
 ## TODO
 
 *   Finish adding basic code examples to `//basics/`
-    *   Multithreading (volatile)
     *   auto
     *   extern
     *   sizeof
@@ -26,7 +25,9 @@ Example C++ code for my reference.
     *   Namespaces
     *   Common types
     *   Forward declares vs. includes
+    *   import/export/module vs include
 *   Look through [C++11](https://en.cppreference.com/w/cpp/11) and add example usage to `//cpp11/`.
+    *   C++11 thread library
 *   Look through [C++14](https://en.cppreference.com/w/cpp/14) and add example usage to `//cpp14/`.
 *   Look through [C++17](https://en.cppreference.com/w/cpp/17) and add example usage to `//cpp17/`.
 *   Look through [C++20](https://en.cppreference.com/w/cpp/20) and add example usage to `//cpp20/`.

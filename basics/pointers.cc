@@ -15,13 +15,20 @@ int main() {
 
   int number = 0;
   pass_by_value(number);
-  std::cout << fmt::format("Passed by value: {}", number) << std::endl;
+  std::cout << fmt::format("Passed by value: {}\n", number);
 
   pass_by_reference(number);
-  std::cout << fmt::format("Passed by reference: {}", number) << std::endl;
+  std::cout << fmt::format("Passed by reference: {}\n", number);
 
   pass_by_pointer(&number);
-  std::cout << fmt::format("Passed by pointer: {}", number) << std::endl;
+  std::cout << fmt::format("Passed by pointer: {}\n\n", number);
+
+  std::cout <<
+      "void pointers (void*) are just raw pointers with no associated type. you can cast it\n"
+      "to other types, although it's risky. if you see a function declaration like this, it\n"
+      "*returns* a void pointer:\n"
+      "\n"
+      "\tvoid *func(int whatever);\n";
 
   return 0;
 }
