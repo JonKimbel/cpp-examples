@@ -186,3 +186,8 @@ cc_binary(
     srcs = ["pthread.cc"],
     linkopts = ["-pthread"],
 )
+
+cc_binary(
+    name = "auto",
+    srcs = ["auto.cc"],
+)
